@@ -7,13 +7,13 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opacus-{{ version }}.tar.gz
+  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
     sha256: c14c3b133900505ab87fd5ae1f449f3e9121cd0a70bbc3c09b64a97c2c6d9806
   - url: https://raw.githubusercontent.com/pytorch/opacus/v{{ version }}/dev_requirements.txt
     sha256: 660581ef75367680176e84065f3e149a6a725d2a663b0ac97eb7ab1e458d78e1
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
